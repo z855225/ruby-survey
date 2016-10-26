@@ -10,8 +10,8 @@ while a <= 9
 		puts a * b
 		b+=1
 	end
-    
-    b=1
+
+	b=1
 	a+=1
 	
 end

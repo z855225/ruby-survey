@@ -37,9 +37,9 @@ def compute_3 (number)
     if number % 3 == 0
 
     	if number % 5 ==0
-    		puts "fifteen *"
+            puts "fifteen *"
     	else
-    	    puts "three *"
+            puts "three *"
         end
 	
     else
