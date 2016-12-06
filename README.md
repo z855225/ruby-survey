@@ -15,3 +15,6 @@ ruby 讀書會，練習題目
 
 ## 2016-11-23
 1. [星座查詢](https://github.com/z855225/ruby-survey/tree/master/ruby_reading_club/2016-11-23/star_sign)
+
+## 2016-12-06
+1. [踩地雷](https://github.com/z855225/ruby-survey/tree/master/ruby_reading_club/2016-12-06/mine_sweeper)
