@@ -2,7 +2,7 @@ class GameMaker
 
 	def table_size (table_for_maker)		
 		while true
-			print "\nPlease enter a number of table size ( >= 3):"
+			print "\nPlease enter a number of table size (N * N, N >= 3): "
 			$table_size = gets.chomp.to_i
 			
 			#清除畫面
@@ -28,7 +28,7 @@ class GameMaker
 	def embed_mine (table_for_maker)
 
 		while true
-			#印出初始化的 table
+			#印出 table
 			print_table(table_for_maker)
 			
 			puts "Please select a number for action"
@@ -41,44 +41,75 @@ class GameMaker
 			system "clear"
 
 			case selection
+
 			when selection = 1
 
+				init_game_table(table_for_maker)
+
 				while true
-					#印出設好地雷的 table
+					#印出 table
 					print_table(table_for_maker)
 					
-					puts "Please set mine location (the upper left corner is X = 1, Y = 1)"
-							
-					puts "Please enter X"
-					x = gets.chomp.to_i
-
-					puts "Please enter Y"
-					y = gets.chomp.to_i
-
+					puts "Please select a number for action"
+					puts "1: set mine location"
+					puts "2: done"
+					print "Select:"
+					selection2 = gets.chomp.to_i
 					system "clear"
 					
-					break if x >= 1 and x <= $table_size and y >= 1 and y <= $table_size
-				end
+					case selection2
 
-				table_for_maker[x][y] = "B"
-			
+					when selection2 = 1
+						
+						while true
+							#印出 table
+							print_table(table_for_maker)
+								
+							puts "Please set mine location"
+										
+							puts "Please enter row"
+							row = gets.chomp.to_i
+
+							puts "Please enter column"
+							column = gets.chomp.to_i
+
+							system "clear"
+								
+							break if row >= 1 and row <= $table_size and column >= 1 and column <= $table_size
+						end
+
+						table_for_maker[row][column] = "B"
+
+					when selection2 = 2
+
+						system "clear"
+						break
+
+					end
+				end
+						
 			when selection = 2
+
 				init_game_table(table_for_maker)
 
 				for bomb_count in 1..Random.new.rand(1..$table_size)
 
-					x = Random.new.rand(1..$table_size)
+					row = Random.new.rand(1..$table_size)
 
-					y = Random.new.rand(1..$table_size)
+					column = Random.new.rand(1..$table_size)
 
-					table_for_maker[x][y] = "B"
+					table_for_maker[row][column] = "B"
 				end
 
 			when selection = 3
+
 				init_game_table(table_for_maker)
+
 			when selection = 4
+				
 				system "clear"
 				break
+
 			end
 			
 		end

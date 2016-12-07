@@ -21,27 +21,27 @@ class GamePlayer
 
 				puts "\nPlease select a location \n\n"
 
-				puts "Please enter X"
-				x = gets.chomp.to_i
+				puts "Please enter row"
+				row = gets.chomp.to_i
 
-				puts "Please enter Y"
-				y = gets.chomp.to_i
+				puts "Please enter column"
+				column = gets.chomp.to_i
 
 		    	system "clear"
 
-		    	break if x >= 1 and x <= $table_size and y >= 1 and y <= $table_size
+		    	break if row >= 1 and row <= $table_size and column >= 1 and column <= $table_size
 		    end
 	    	
-	    	table_for_player[x][y] = table_for_maker[x][y]
+	    	table_for_player[row][column] = table_for_maker[row][column]
 
-	      	if table_for_player[x][y] == "B"
+	      	if table_for_player[row][column] == "B"
 	      		print_table (table_for_player)
 	        	puts "\nBOOOOOOM !!!"
 	        	puts "Game Over\n\n"
 	        	break
 	      	end
 
-	      	if table_for_player[x][y] == 0
+	      	if table_for_player[row][column] == 0
 	      		auto_sweepe_safe_zone(table_for_player,table_for_maker) 		
 	      	end
 
