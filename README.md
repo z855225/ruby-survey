@@ -18,3 +18,9 @@ ruby 讀書會，練習題目
 
 ## 2016-12-06
 1. [踩地雷](https://github.com/z855225/ruby-survey/tree/master/ruby_reading_club/2016-12-06/mine_sweeper)
+
+## 2016-12-14
+1. [羅馬數字](https://github.com/z855225/ruby-survey/tree/master/ruby_reading_club/2016-12-14/roman_numbers)
+
+## 2016-12-21
+1. [費氏數列](https://github.com/z855225/ruby-survey/tree/master/ruby_reading_club/2016-12-21/fib_numbers)
